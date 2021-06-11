@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: Geometria, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-grey;
+  background-color: $color-black;
+
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  @include list-reset;
+}
+
+a {
+  text-decoration: none;
+  color: $color-grey;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: $color-grey;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6  {
+  @include mp-reset;
+}
+
+.page-wrapper {
+  position: relative;
+
+  display: flex;
+
+  overflow-x: hidden;
+}
+
+.page-container {
+  width: 100%;
+}

@@ -1,0 +1,9 @@
+.idea
+.vscode
+.github
+.env
+ehthumbs.db
+Thumbs.db
+_config.yml
+node_modules
+package-lock.json

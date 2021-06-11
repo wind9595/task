@@ -1,0 +1,24 @@
+.btn {
+  height: 80px;
+
+  padding: 28px 44px;
+
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  color: $color-white;
+
+  border: none;
+  border-radius: 10px;
+  background-color: $color-gold;
+
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    border: none;
+  }
+}

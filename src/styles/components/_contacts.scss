@@ -1,0 +1,36 @@
+.contacts {
+  max-width: 190px;
+
+  &__item {
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &-title {
+      font-size: 14px;
+      line-height: 26px;
+
+      @include respond-below(xxl) {
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+
+    &-link {
+      font-size: 24px;
+      line-height: 45px;
+      color: $color-light-grey;
+
+      &:active {
+        color: $color-light-grey;
+      }
+
+      @include respond-below(xxl) {
+        font-size: 20px;
+        line-height: 40px;
+      }
+    }
+  }
+}

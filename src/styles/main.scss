@@ -1,0 +1,17 @@
+@import "vendors/libs";
+
+@import "helpers/variables";
+@import "helpers/mixins";
+
+@import "base/general";
+@import "base/fonts";
+
+@import "pages/main";
+
+@import "components/header";
+@import "components/footer";
+@import "components/btn";
+@import "components/contacts";
+@import "components/nav";
+@import "components/preloader";
+@import "components/cardApplication";

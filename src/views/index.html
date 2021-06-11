@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Credit EuropeBank</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="#">
+    <link rel="stylesheet" href="styles/main.css">
+   </head>
+<body id="body">
+<div class="preloader">
+    <img src="img/sprites/intermediate-svg/spinner.svg" alt="">
+</div>
+<div class="page-wrapper">
+    <div class="page-nav">
+        @@include("components/nav.html")
+    </div>
+    <div class="page-container">
+        @@include("components/header.html")
+        <main class="page-main">
+            <h1 class="page-main__title">Bank</h1>
+            <section class="card">
+                <div class="card__wrapper">
+                    <div class="card__title-wrapper">
+                        <h2 class="card__title">Твоя премиум карта</h2>
+                        <span class="card__title--add">Лучшая карта для любителей путешествий</span>
+                    </div>
+                    <ul class="card__list">
+                        <li class="card__item">
+                            <p class="card__item-title">11%</p>
+                            <p class="card__item-descr">Вернем за покупки милями</p>
+                        </li>
+                        <li class="card__item">
+                            <p class="card__item-title">0%</p>
+                            <p class="card__item-descr">Бесплатное снятие наличных по всему миру</p>
+                        </li>
+                        <li class="card__item">
+                            <p class="card__item-title">7%</p>
+                            <p class="card__item-descr">До 7% на остаток по счету</p>
+                        </li>
+                        <li class="card__item">
+                            <p class="card__item-title">0р</p>
+                            <p class="card__item-descr">Бесплатное годовое обслуживание</p>
+                        </li>
+                    </ul>
+                    <button class="card__btn btn" type="button">Заказать сейчас</button>
+                </div>
+            </section>
+            <section class="travel-benefits">
+                <div class="travel-benefits__wrapper">
+                    <h2 class="travel-benefits__title">Путешествие мечты начинается с CARD PLUS</h2>
+                    <p class="travel-benefits__descr">
+                        Мы продумали каждую мелочь. Владельцы CARD PLUS получают особый пакет привилегий, необходимый для любого
+                        путешествия
+                    </p>
+                    <ul class="travel-benefits__list">
+                        <li class="travel-benefits__item">
+                            <div class="travel-benefits__item-img-wrapper">
+                                <svg class="travel-benefits__item-img">
+                                    <use xlink:href="img/sprites/sprite.svg#icon-travel-1"></use>
+                                </svg>
+                            </div>
+                            <p class="travel-benefits__item-title">Билеты любых авиакомпаний</p>
+                            <p class="travel-benefits__item-descr">
+                                Предложения от 300+ авиакомпаний, 185+ lowcost перевозчиков, чартеры от 60 крупных
+                                российских туроператоров
+                            </p>
+                        </li>
+                        <li class="travel-benefits__item">
+                            <div class="travel-benefits__item-img-wrapper">
+                                <svg class="travel-benefits__item-img">
+                                    <use xlink:href="img/sprites/sprite.svg#icon-travel-2"></use>
+                                </svg>
+                            </div>
+                            <p class="travel-benefits__item-title">Мили больше не сгорают</p>
+                            <p class="travel-benefits__item-descr">
+                                Мили, накопленные при оплате картой AlfaTravel, не сгорают и остаются на вашем счете, пока вы не
+                                решите их потратить
+                            </p>
+                        </li>
+                        <li class="travel-benefits__item">
+                            <div class="travel-benefits__item-img-wrapper">
+                                <svg class="travel-benefits__item-img">
+                                    <use xlink:href="img/sprites/sprite.svg#icon-travel-3"></use>
+                                </svg>
+                            </div>
+                            <p class="travel-benefits__item-title">Продвинутая страховка – бесплатно</p>
+                            <p class="travel-benefits__item-descr">
+                                Расширенная страховка для всей семьи с учетом экстремальных видов спорта и алкоголя
+                            </p>
+                        </li>
+                        <li class="travel-benefits__item">
+                            <div class="travel-benefits__item-img-wrapper">
+                                <svg class="travel-benefits__item-img">
+                                    <use xlink:href="img/sprites/sprite.svg#icon-travel-4"></use>
+                                </svg>
+                            </div>
+                            <p class="travel-benefits__item-title">Доступ к счетам в разных валютах</p>
+                            <p class="travel-benefits__item-descr">
+                                Текущие счета в рублях, долларах США, евро, английских фунтах стерлингов и швейцарских франках
+                                открываются в любой момент
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="features">
+                <div class="features__wrapper">
+                    <h2 class="features__title">Мы позаботились, чтобы вы получили</h2>
+                    <ul class="features__list">
+                        <li class="features__item">
+                            <div class="features__item-img">
+                                <img src="img/features-1.jpg" alt="">
+                            </div>
+                            <p class="features__item-title features__item-title--icon">Бесплатный безлимитный интернет в роуминге</p>
+                            <div class="features__item-icon-wrapper">
+                                <div class="features__item-icon">
+                                    <img src="img/icon-1.png" alt="">
+                                </div>
+                                <div class="features__item-icon">
+                                    <img src="img/icon-2.png" alt="">
+                                </div>
+                                <div class="features__item-icon">
+                                    <img src="img/icon-3.png" alt="">
+                                </div>
+                                <div class="features__item-icon">
+                                    <img src="img/icon-4.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="features__item">
+                            <div class="features__item-img">
+                                <img src="img/features-2.jpg" alt="">
+                            </div>
+                            <p class="features__item-title">Бесплатная упаковка багажа</p>
+                            <p class="features__item-descr">
+                                Держатели карт Visa Signature могут упаковать багаж в крупных аэропортах России
+                            </p>
+                        </li>
+                        <li class="features__item">
+                            <div class="features__item-img">
+                                <img src="img/features-3.jpg" alt="">
+                            </div>
+                            <p class="features__item-title">Бесплатный доступ в приложении App In The Air</p>
+                            <p class="features__item-descr">
+                                Бесплатная премиум подписка при покупке авиабилетов на travel.alfabank.ru
+                            </p>
+                        </li>
+                        <li class="features__item">
+                            <div class="features__item-img">
+                                <img src="img/features-4.jpg" alt="">
+                            </div>
+                            <p class="features__item-title features__item-title--icon">
+                                Такси бизнес-класса со скидкой 20%
+                            </p>
+                            <div class="features__item-icon-wrapper">
+                                <div class="features__item-icon">
+                                    <img src="img/icon-5.png" alt="">
+                                </div>
+                                <div class="features__item-icon">
+                                    <img src="img/icon-6.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="features__item">
+                            <div class="features__item-img">
+                                <img src="img/features-5.jpg" alt="">
+                            </div>
+                            <p class="features__item-title">
+                                Скидка в ресторанах Novikov Group в аэропорту Шереметьево
+                            </p>
+                        </li>
+                        <li class="features__item">
+                            <div class="features__item-img">
+                                <img src="img/features-6.jpg" alt="">
+                            </div>
+                            <p class="features__item-title">
+                                Доступ в бизнес-залы Priority Pass по всему миру
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="personal-assistant">
+                <div class="personal-assistant__wrapper">
+                    <h2 class="personal-assistant__title">Персональный помощник</h2>
+                    <p class="personal-assistant__descr">Бесплатно для владельцев <span class="personal-assistant__descr--add">CARD PLUS</span></p>
+                    <div class="personal-assistant__wrapper-inner">
+                        <div class="personal-assistant__img">
+                            <img src="img/personal-assistant.png" alt="">
+                        </div>
+                        <ul class="personal-assistant__list">
+                            <li class="personal-assistant__item">
+                                <div class="personal-assistant__item-img-wrapper">
+                                    <svg class="personal-assistant__item-img">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-personal-assistant-1"></use>
+                                    </svg>
+                                </div>
+                                <p class="personal-assistant__item-title">
+                                    Организует встречи, найдет гидов и переводчиков
+                                </p>
+                            </li>
+                            <li class="personal-assistant__item">
+                                <div class="personal-assistant__item-img-wrapper">
+                                    <svg class="personal-assistant__item-img">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-personal-assistant-2"></use>
+                                    </svg>
+                                </div>
+                                <p class="personal-assistant__item-title">
+                                    Спланирует поездку по самым интересным местам вашего отдыха
+                                </p>
+                            </li>
+                            <li class="personal-assistant__item">
+                                <div class="personal-assistant__item-img-wrapper">
+                                    <svg class="personal-assistant__item-img">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-personal-assistant-3"></use>
+                                    </svg>
+                                </div>
+                                <p class="personal-assistant__item-title">
+                                    Достанет билеты на мероприятия, даже если их уже нет в продаже
+                                </p>
+                            </li>
+                            <li class="personal-assistant__item">
+                                <div class="personal-assistant__item-img-wrapper">
+                                    <svg class="personal-assistant__item-img">
+                                        <use xlink:href="img/sprites/sprite.svg#icon-personal-assistant-4"></use>
+                                    </svg>
+                                </div>
+                                <p class="personal-assistant__item-title">
+                                    Закажет столик в ресторане, клубе или кафе
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="issue-card">
+                <div class="issue-card__wrapper">
+                    <h2 class="issue-card__title">Оформите свою новую карту для путешествий</h2>
+                    <ul class="issue-card__list">
+                        <li class="issue-card__item">
+                            <p class="issue-card__item-title">
+                                <span class="issue-card__item-title--add">до</span>
+                                11%
+                            </p>
+                            <p class="issue-card__item-descr">
+                                Милями за услуги, оплаченные на travel.ru
+                            </p>
+                        </li>
+                        <li class="issue-card__item">
+                            <p class="issue-card__item-title">
+                                <span class="issue-card__item-title--add">до</span>
+                                11%
+                            </p>
+                            <p class="issue-card__item-descr">
+                                Милями за любые <br> покупки по карте
+                            </p>
+                        </li>
+                        <li class="issue-card__item">
+                            <p class="issue-card__item-title">1 = 1</p>
+                            <p class="issue-card__item-descr">
+                                Оплата милями билетов любых авиакомпаний по курсу 1 миля = 1 Р
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="issue-card__wrapper-inner">
+                        <div class="issue-card__img">
+                            <img src="img/card.png" alt="">
+                        </div>
+                        <div class="issue-card__info">
+                            <ul class="issue-card__type">
+                                <li class="issue-card__type-item">
+                                    <button class="issue-card__type-btn" type="button">Кредитная карта</button>
+                                </li>
+                                <li class="issue-card__type-item">
+                                    <button class="issue-card__type-btn" type="button">Дебетовая карта</button>
+                                </li>
+                            </ul>
+                            <button class="issue-card__btn btn" type="button">Отправить заявку</button>
+                            <div class="issue-card__info-list-link-wrapper">
+                                <ul class="issue-card__info-list">
+                                    <li class="issue-card__info-item">
+                                        <p class="issue-card__info-title">Стоимость карты в год (руб.)</p>
+                                        <div class="issue-card__info-descr">
+                                            <p class="issue-card__info-descr-cost">
+                                                <span class="issue-card__info-descr--without-services-value">6 490</span> (без пакета услуг),
+                                            </p>
+                                            <p class="issue-card__info-descr-cost">
+                                                <span class="issue-card__info-descr--services-value">4 990</span> (с пакетом услуг)
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="issue-card__info-item">
+                                        <p class="issue-card__info-title">Приветственные мили (шт.)</p>
+                                        <div class="issue-card__info-descr">
+                                            <span class="issue-card__info-descr--miles-value">1 000</span>
+                                        </div>
+                                    </li>
+                                    <li class="issue-card__info-item">
+                                        <p class="issue-card__info-title">Мили за покупки</p>
+                                        <div class="issue-card__info-descr">
+                                            <span class="issue-card__info-descr--percents-value">5</span>%
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a class="issue-card__info-link" href="#">Все подробности</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include("components/footer.html")
+    </div>
+</div>
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

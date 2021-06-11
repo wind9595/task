@@ -1,0 +1,124 @@
+.page-footer {
+  width: 100%;
+
+  background-image: url("../img/bg-3.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  transition: 0.6s all;
+  
+  &__wrapper {
+    padding-top: 167px;
+    padding-bottom: 54px;
+
+    display: flex;
+
+    transition: 0.6s all;
+
+    @include respond-above(max) {
+      width: 1180px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(max) {
+      width: 68%;
+      margin: 0 ((100%-68%)/2);
+    }
+
+    @include respond-below(xl) {
+      flex-wrap: wrap;
+
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(md) {
+      flex-direction: column;
+    }
+
+    @include respond-below(sm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+
+    width: 25%;
+    margin-right: 10%;
+
+    @include respond-below(max) {
+      margin-right: 5%;
+    }
+
+    @include respond-below(xl) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    & img {
+      margin-bottom: 15px;
+
+      @include respond-below(xl) {
+        width: 296px;
+      }
+    }
+
+    &-descr {
+      font-size: 14px;
+      line-height: 26px;
+      color: $color-light-grey;
+
+      @include respond-below(xxl) {
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__list {
+    width: 39%;
+
+    column-count: 2;
+    column-gap: 18%;
+
+    margin-right: auto;
+
+    @include respond-below(xl) {
+      width: auto;
+    }
+
+    @include respond-below(md) {
+      margin-bottom: 30px;
+    }
+
+    @include respond-below(md) {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    @include respond-below(sm) {
+      margin-bottom: 20px;
+    }
+
+    &-link {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 30px;
+      white-space: nowrap;
+
+      @include respond-below(xxl) {
+        font-size: 11px;
+        line-height: 26px;
+      }
+
+      @include respond-below(sm) {
+        line-height: 12px;
+        white-space: normal;
+      }
+    }
+  }
+}

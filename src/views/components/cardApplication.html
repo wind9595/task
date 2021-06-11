@@ -1,0 +1,38 @@
+<div class="card-application">
+    <div class="card-application__wrapper">
+        <h2 class="card-application__title">Заявка на карту</h2>
+        <button class="card-application__btn-close btn" type="button">
+            <svg>
+                <use xlink:href="img/sprites/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <form id="form-order" class="card-application__form" action="#" method="POST">
+            <div class="card-application__form-item">
+                <input class="card-application__form-item-field card-application__form-item-field--name" type="text" name="name" required>
+                <label class="card-application__form-item-label">ФИО</label>
+            </div>
+            <div class="card-application__form-item">
+                <input class="card-application__form-item-field card-application__form-item-field--email" type="email" name="email" required>
+                <label class="card-application__form-item-label">Электронный адрес</label>
+            </div>
+            <div class="card-application__form-item">
+                <input class="card-application__form-item-field card-application__form-item-field--phone" type="text" name="phone" required>
+                <label class="card-application__form-item-label">Номер телефона</label>
+            </div>
+            <div class="card-application__form-item">
+                <select class="card-application__form-item-field card-application__form-item-field--select" name="citizenship">
+                    <option value="ru">Россия</option>
+                    <option value="us">США</option>
+                    <option value="de">Германия</option>
+                    <option value="uk">Великобритания</option>
+                </select>
+                <label class="card-application__form-item-label card-application__form-item-label--select">Гражданство</label>
+            </div>
+            <div class="card-application__form-item card-application__form-item--checkbox">
+                <input class="card-application__form-item-field card-application__form-item-field--checkbox" type="checkbox" id="checkbox" required>
+                <label class="card-application__form-item-label--checkbox" for="checkbox">Я соглашаюсь на <span class="card-application__form-item-label--checkbox-add">обработку</span> моих персональных данных</label>
+            </div>
+            <button class="card-application__form-btn btn" type="submit">Заказать сейчас</button>
+        </form>
+    </div>
+</div>

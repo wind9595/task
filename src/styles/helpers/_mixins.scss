@@ -1,0 +1,119 @@
+@mixin mp-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Mixins.
+// -----------------------------------------------------------------------------
+
+// Bootstrap breakpoints.
+$breakpoints: (
+        xs: 360px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px,
+        max: 1920px
+);
+
+// @include font($size) {}
+//@mixin font($size) {}
+@mixin font($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// @include respond-above(sm) {}
+@mixin respond-above($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// @include respond-below(sm) {}
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// @include respond-between(sm, md) {}
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map-has-key($breakpoints, $lower) == false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    @if (map-has-key($breakpoints, $upper) == false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+
+/// Append defined string to parent selector
+/// @require {function} parent-append
+/// @param {String} $appendix - selector that we want append to parent
+/// @param {Number} $parent [1] - index of parent selector
+/// @param {Boolean} $at-start [false] - append to start of parent selector
+@mixin parent-append ($appendix, $parent: 1, $at-start: false) {
+  @at-root #{parent-append($appendix, $parent, $at-start)} {
+    @content;
+  }
+}
+
+// Visually hidden element
+@mixin visually-hidden() {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0;
+  border:0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+@mixin supports-flex() {
+  @supports(display: flex) {
+    @content;
+  }
+}
+
+/* Forms */
+@mixin form-input-font() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+@mixin form-input-styles() {
+  border: none;
+  background: $c-lite-blue;
+  color: rgba($c-text-1, .6);
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: none!important;
+}

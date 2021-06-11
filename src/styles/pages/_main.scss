@@ -1,0 +1,968 @@
+.page-main {
+  width: 100%;
+
+  position: relative;
+
+  transition: 0.6s all;
+
+  &__title {
+    display: none;
+  }
+}
+
+.card {
+  padding-bottom: 278px;
+
+  background-image: url("../img/bg-1-.png");
+  background-repeat: no-repeat;
+  background-position: 100% 34px;
+  background-size: 100%;
+
+  transition: 0.6s all;
+
+  @include respond-above(max) {
+    background-image:
+            url("../img/bg-1-1.png"),
+            url("../img/bg-1.png");
+    background-repeat:
+            no-repeat,
+            no-repeat;
+    background-position:
+            100% 40px,
+            100% 34px;
+    background-size:
+            auto,
+            100%;
+  }
+
+  @include respond-below(xl) {
+    padding-bottom: 0;
+    margin-bottom: 100px;
+
+    background-position: 100% 84px;
+  }
+
+  @include respond-below(md) {
+    background-size: 1100px;
+  }
+
+  &__wrapper {
+    transition: 0.6s all;
+
+    @include respond-above(max) {
+      width: 980px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(max) {
+      width: 58%;
+      margin: 0 ((100%-58%)/2);
+    }
+
+    @include respond-below(xl) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(md) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-size: 96px;
+    line-height: 109px;
+    font-weight: 900;
+    color: $color-white;
+
+    @include respond-below(xxl) {
+      font-size: 76px;
+      line-height: 89px;
+    }
+
+    @include respond-below(xl) {
+      margin-bottom: 10px;
+
+      font-size: 51px;
+      line-height: 64px;
+
+      text-align: center;
+    }
+
+    @include respond-below(md) {
+      font-size: 38px;
+      line-height: 51px;
+    }
+
+    @include respond-below(sm) {
+      font-size: 27px;
+      line-height: 40px;
+    }
+
+    &-wrapper {
+      position: relative;
+
+      width: 735px;
+
+      margin-bottom: 72px;
+
+      @include respond-below(xxl) {
+        width: 571px;
+      }
+
+      @include respond-below(xl) {
+        width: auto;
+      }
+
+      @include respond-below(md) {
+        margin-bottom: 450px;
+      }
+    }
+
+    &--add {
+      position: absolute;
+      right: 102px;
+      bottom: 12px;
+
+      width: 303px;
+
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 800;
+      color: $color-grey;
+
+      @include respond-below(xxl) {
+        width: 210px;
+
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      @include respond-below(xl) {
+        position: static;
+
+        display: block;
+        width: auto;
+        text-align: center;
+      }
+
+      @include respond-below(sm) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__list {
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 33px;
+
+    @include respond-below(md) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__item {
+    max-width: 127px;
+    margin-bottom: 36px;
+
+    &:nth-child(odd) {
+      max-width: 100px;
+    }
+
+    &-title {
+      font-size: 36px;
+      line-height: 45px;
+      color: $color-gold;
+    }
+  }
+
+  &__btn {
+    width: 290px;
+
+    @include respond-below(md) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.travel-benefits {
+  margin-bottom: 120px;
+
+  @include respond-below(xl) {
+    margin-bottom: 100px;
+  }
+
+  &__wrapper {
+    transition: 0.6s all;
+
+    @include respond-above(max) {
+      width: 1008px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(max) {
+      width: 58%;
+      margin: 0 ((100%-58%)/2);
+    }
+
+    @include respond-below(xl) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(md) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 800;
+    color: $color-white;
+    text-align: center;
+
+    @include respond-below(lg) {
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    @include respond-below(md) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__descr {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 83px;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: $color-grey;
+
+    @include respond-below(lg) {
+      margin-bottom: 40px;
+    }
+
+    @include respond-below(md) {
+      width: auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 20%;
+    margin-right: 6%;
+    margin-bottom: 40px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      @include respond-below(lg) {
+        margin-right: 0;
+      }
+      @include respond-below(sm) {
+        margin-right: auto;
+      }
+    }
+
+    @include respond-below(lg) {
+      width: 45%;
+      margin-right: 10%;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+      margin-right: auto;
+    }
+
+    &-img {
+      width: 58px;
+      height: 57px;
+
+      &-wrapper {
+        margin-bottom: 23px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 18px;
+
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 800;
+      color: $color-white;
+
+
+      @include respond-below(xxl) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    &-descr {
+      @include respond-below(xxl) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.features {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    transition: 0.6s all;
+
+    @include respond-above(max) {
+      width: 980px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(max) {
+      width: 58%;
+      margin: 0 ((100%-58%)/2);
+    }
+
+    @include respond-below(xl) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(md) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 800;
+    color: $color-white;
+    text-align: center;
+
+    @include respond-below(lg) {
+      margin-bottom: 40px;
+
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    @include respond-below(md) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 29%;
+    margin-right: 6%;
+    margin-bottom: 45px;
+
+    &:nth-child(3n) {
+      @include respond-above(lg) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(2n) {
+      @include respond-below(lg) {
+        margin-right: 0;
+      }
+
+      @include respond-below(sm) {
+        margin-right: auto;
+      }
+    }
+
+    @include respond-below(lg) {
+      width: 45%;
+      margin-right: 10%;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+      margin-right: auto;
+    }
+
+    &-img {
+      margin-bottom: 34px;
+    }
+
+    &-title {
+      margin-bottom: 7px;
+
+      font-size: 18px;
+      line-height: 23px;
+      color: $color-white;
+
+      @include respond-below(xxl) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &--icon {
+        margin-bottom: 21px;
+      }
+    }
+
+    &-descr {
+      @include respond-below(xxl) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &-icon {
+      @include respond-below(xxl) {
+        margin-bottom: 15px;
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+
+        max-width: 208px;
+      }
+
+      & img {
+        width: auto;
+      }
+
+      &:nth-child(even) {
+        margin-bottom: 21px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.personal-assistant {
+  padding-bottom: 157px;
+
+  background-image: url("../img/bg-2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 261px;
+
+  @include respond-below(lg) {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+  
+  &__wrapper {
+    transition: 0.6s all;
+
+    @include respond-above(max) {
+      width: 980px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(max) {
+      width: 58%;
+      margin: 0 ((100%-58%)/2);
+    }
+
+    @include respond-below(xl) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(md) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &-inner {
+     max-width: 791px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      @include respond-below(lg) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 800;
+    color: $color-white;
+    text-align: center;
+
+    @include respond-below(lg) {
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    @include respond-below(md) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-white;
+    text-align: center;
+
+    &--add {
+      color: $color-gold;
+    }
+  }
+
+  &__img {
+    @include respond-below(lg) {
+      width: 375px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: auto;
+    }
+  }
+
+  &__list {
+    padding-top: 91px;
+
+    @include respond-below(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    width: 260px;
+
+    margin-bottom: 45px;
+
+    @include respond-below(md) {
+      width: 45%;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+    }
+
+    &-img {
+      width: 45px;
+      max-height: 48px;
+
+      &-wrapper {
+        margin-right: 18px;
+      }
+    }
+
+    &-title {
+      color: $color-white;
+    }
+  }
+}
+
+.issue-card {
+  margin-bottom: 75px;
+
+  &__wrapper {
+    transition: 0.6s all;
+
+    @include respond-above(max) {
+      width: 1109px;
+      margin: 0 auto;
+    }
+
+    @include respond-below(max) {
+      width: 64%;
+      margin: 0 ((100%-64%)/2);
+    }
+
+    @include respond-below(xxl) {
+      width: 75%;
+    }
+
+    @include respond-below(xl) {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(md) {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    &-inner {
+      display: flex;
+
+      @include respond-below(xl) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 800;
+    color: $color-white;
+    text-align: center;
+
+    @include respond-below(lg) {
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    @include respond-below(md) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 777px;
+    margin: 0 auto;
+    margin-bottom: 86px;
+
+    @include respond-below(xl) {
+      width: auto;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+    margin-right: 12%;
+
+    @include respond-below(xl) {
+      width: 25%;
+    }
+
+    @include respond-below(md) {
+      width: 100%;
+      margin-bottom: 20px;
+      margin-right: 0;
+
+      text-align: center;
+
+      & br {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      width: 171px;
+
+      @include respond-below(xl) {
+        width: 25%;
+      }
+
+      @include respond-below(md) {
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      width: 255px;
+      margin-right: 0;
+
+      @include respond-below(xl) {
+        width: 25%;
+      }
+
+      @include respond-below(md) {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      font-size: 36px;
+      line-height: 45px;
+      color: $color-gold;
+
+      &--add {
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  &__img {
+    width: 46%;
+
+    margin-right: 10%;
+
+    @include respond-below(max) {
+      margin-right: 5%;
+    }
+
+    @include respond-below(xl) {
+      width: auto;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info {
+    width: 37%;
+
+    @include respond-below(max) {
+      width: 42%;
+    }
+
+    @include respond-below(xxl) {
+      width: 40%;
+    }
+
+    @include respond-below(xl) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+    }
+
+
+    &-list {
+      margin-bottom: 27px;
+
+      &-link-wrapper {
+        @include respond-below(xl) {
+          max-width: 405px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        @include respond-below(sm) {
+          max-width: 210px;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 500;
+
+      @include respond-below(xl) {
+        justify-content: space-around;
+      }
+
+      @include respond-below(sm) {
+        flex-direction: column;
+
+        width: 210px;
+        margin: 0 auto;
+      }
+    }
+
+    &-title {
+      width: 203px;
+      margin-right: 6%;
+
+      @include respond-below(max) {
+        margin-right: 3%;
+      }
+
+      white-space: nowrap;
+    }
+
+    &-descr {
+      width: 43%;
+
+      color: $color-light-grey;
+
+      @include respond-above(max) {
+        width: 44%;
+      }
+
+      @include respond-above(xl) {
+        width: 38%;
+      }
+
+      &-cost {
+        white-space: nowrap;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 500;
+      color: $color-gold;
+
+      border-bottom: 1px dashed $color-gold;
+
+      &:active {
+        color: $color-gold;
+      }
+    }
+  }
+
+  &__type {
+    width: 356px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+
+    @include respond-below(xl) {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include respond-below(md) {
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+
+      justify-content: space-around;
+    }
+
+    &-item {
+      @include respond-below(xl) {
+        margin: 0 auto;
+      }
+      &--active {
+        pointer-events: none;
+      }
+    }
+
+    &-btn {
+      font-size: 18px;
+      line-height: 23px;
+
+      color: $color-grey;
+
+      cursor: pointer;
+
+      border: none;
+
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        opacity: 0.8;
+      }
+
+      &--active {
+        color: $color-gold;
+
+        cursor: default;
+
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 352px;
+
+    margin-bottom: 67px;
+
+    white-space: nowrap;
+
+    @include respond-below(max) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    @include respond-below(xxl) {
+      padding: 0;
+    }
+
+    @include respond-below(xl) {
+      display: block;
+      max-width: 352px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include respond-below(sm) {
+      width: 100%;
+    }
+  }
+}
